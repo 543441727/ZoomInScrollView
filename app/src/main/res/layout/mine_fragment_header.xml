@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="220dp"
+             >
+<ImageView
+    android:id="@+id/ivBg"
+    android:src="@drawable/my_page_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    />
+    <LinearLayout
+        android:id="@+id/layout_user_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_my_avatar"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/layout_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Wey Ye"
+                    android:textColor="@color/ssxinzi10"
+                    android:textSize="16.0sp"/>
+
+                <!--<ImageView-->
+                <!--android:id="@+id/img_mark_v"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="1.0dip"-->
+                <!--android:src="@drawable/all_newv" />-->
+
+                <ImageView
+                    android:id="@+id/img_toutiaohao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4.0dip"
+                    android:src="@drawable/newtoutiaohao_details1"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/img_header_click_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4.0dip"
+                    android:src="@drawable/name_arrow"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_count"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="23.0dip"
+            android:layout_marginTop="18.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_following"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_following_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.9"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="16.0sp"/>
+
+                <TextView
+                    android:id="@+id/txt_following_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:text="@string/mine_tab_followings_title"
+                    android:textColor="@color/mine_info_title_color"
+                    android:textSize="12.0sp"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_user_info_divider_one"
+                android:layout_width="0.5dip"
+                android:layout_height="38.0dip"
+                android:background="@color/mine_info_divider_color"/>
+
+            <LinearLayout
+                android:id="@+id/layout_followers"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_followers_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.9"
+                    android:text="1.1w"
+                    android:textColor="@color/white"
+                    android:textSize="16.0sp"/>
+
+                <TextView
+                    android:id="@+id/txt_followers_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:text="@string/mine_tab_followers_title"
+                    android:textColor="@color/mine_info_title_color"
+                    android:textSize="12.0sp"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_user_info_divider_two"
+                android:layout_width="0.5dip"
+                android:layout_height="38.0dip"
+                android:background="@color/mine_info_divider_color"/>
+
+            <LinearLayout
+                android:id="@+id/layout_recent_visitors"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_recent_visitors_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.9"
+                    android:text="10w"
+                    android:textColor="@color/white"
+                    android:textSize="16.0sp"/>
+
+                <TextView
+                    android:id="@+id/txt_recent_visitors_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:text="@string/mine_tab_visitors_title"
+                    android:textColor="@color/mine_info_title_color"
+                    android:textSize="12.0sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--<de.hdodenhof.circleimageview.CircleImageView-->
+        <!--android:id="@+id/img_login_space"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--/>-->
+        <ImageView
+            android:id="@+id/img_register"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_above="@+id/tv_register"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/log_in_register"/>
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:includeFontPadding="false"
+            android:paddingBottom="28.0dip"
+            android:text="@string/mine_login_hint"
+            android:textColor="@color/ssxinzi12"
+            android:textSize="14.0sp"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>
